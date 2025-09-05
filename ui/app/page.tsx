@@ -9,7 +9,8 @@ export default function Home() {
               The John Nash Society
             </h1>
             <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Exploring the strategic mind through game theory, mathematics, and innovative thinking
+              Exploring the strategic mind through game theory, mathematics, and
+              innovative thinking
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg">
@@ -38,9 +39,10 @@ export default function Home() {
           </div>
           <div className="bg-slate-50 dark:bg-slate-700 rounded-xl p-8 shadow-lg">
             <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed text-center">
-              To foster a community of curious minds who explore the principles of game theory,
-              mathematics, and strategic thinking inspired by John Nash, while promoting collaboration,
-              innovation, and resilience in the face of challenges.
+              To foster a community of curious minds who explore the principles
+              of game theory, mathematics, and strategic thinking inspired by
+              John Nash, while promoting collaboration, innovation, and
+              resilience in the face of challenges.
             </p>
           </div>
         </div>
@@ -57,8 +59,9 @@ export default function Home() {
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg">
             <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed text-center mb-6">
-              To be a leading student hub that cultivates future thinkers, innovators, and problem-solvers
-              who apply the lessons of John Nash's work and life to create positive impact in academia,
+              To be a leading student hub that cultivates future thinkers,
+              innovators, and problem-solvers who apply the lessons of John
+              Nash's work and life to create positive impact in academia,
               industry, and society.
             </p>
             <p className="text-base text-slate-600 dark:text-slate-400 text-center italic">
@@ -75,7 +78,8 @@ export default function Home() {
             Ready to Join the Conversation?
           </h2>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-            Connect with fellow strategic thinkers and explore the fascinating world of game theory and mathematical reasoning.
+            Connect with fellow strategic thinkers and explore the fascinating
+            world of game theory and mathematical reasoning.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg">
@@ -97,16 +101,28 @@ export default function Home() {
               Cultivating strategic thinking through mathematics and game theory
             </p>
             <div className="flex justify-center space-x-6">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
                 Events
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
                 Resources
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
                 About
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
                 Contact
               </a>
             </div>
