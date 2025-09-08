@@ -1,9 +1,17 @@
+// import { contactFormSchema } from '@/app/components/ContactForm';
+import { db } from '@/db/drizzle';
+import { contact } from '@/db/schema';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
-const contactFormSchema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
+export const contactFormSchema = z.object({
+  firstName: z
+    .string()
+    .min(2, { message: "Name must be at least 2 characters long." }),
+  lastName: z
+    .string()
+    .min(2, { message: "Name must be at least 2 characters long." }),
+  email: z.email({ message: "Please enter a valid email address." }),
   phone: z.string().optional(),
 });
 
@@ -16,13 +24,14 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: 'Invalid input.', errors: result.error.flatten().fieldErrors }, { status: 400 });
     }
     
-    const { name, email, phone } = result.data;
+    const { firstName, lastName, email, phone } = result.data;
 
-    // You can add more complex logic here, like sending an email or saving to a database.
-    console.log('Contact form submission received:');
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Phone:', phone);
+    await db.insert(contact).values({
+      firstName,
+      lastName,
+      email,
+      phone,
+    });
 
     return NextResponse.json({ message: 'Form submitted successfully!' }, { status: 200 });
   } catch (error) {

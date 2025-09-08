@@ -4,11 +4,14 @@ import { useState } from "react";
 import { z } from "zod";
 import { Button } from "./ui/button";
 
-const contactFormSchema = z.object({
-  name: z
+export const contactFormSchema = z.object({
+  firstName: z
     .string()
     .min(2, { message: "Name must be at least 2 characters long." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
+  lastName: z
+    .string()
+    .min(2, { message: "Name must be at least 2 characters long." }),
+  email: z.email({ message: "Please enter a valid email address." }),
   phone: z.string().optional(),
 });
 
@@ -17,7 +20,8 @@ type FormErrors = { [K in keyof ContactFormInputs]?: string };
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState<ContactFormInputs>({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
   });
@@ -58,7 +62,7 @@ export const ContactForm = () => {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", phone: "" });
+        setFormData({ firstName: "", lastName: "", email: "", phone: "" });
       } else {
         setStatus("error");
       }
@@ -76,22 +80,40 @@ export const ContactForm = () => {
           className="bg-background/10 p-8 rounded-lg shadow-lg"
           noValidate
         >
+          <p className="text-3xl text-center font-semibold mb-6">Join The Community</p>
           <div className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
-                Full Name
+                First Name
               </label>
               <input
                 type="text"
-                id="name"
-                name="name"
-                value={formData.name}
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
                 onChange={handleChange}
                 required
                 className="w-full bg-foreground/5 border border-foreground/20 rounded-md p-3 focus:ring-2 focus:ring-foreground/50 focus:border-foreground/50 outline-none transition duration-200"
               />
-              {errors.name && (
-                <p className="mt-2 text-sm text-red-400">{errors.name}</p>
+              {errors.firstName && (
+                <p className="mt-2 text-sm text-red-400">{errors.firstName}</p>
+              )}
+            </div>
+            <div>
+              <label htmlFor="lastName" className="block text-sm font-medium mb-2">
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+                className="w-full bg-foreground/5 border border-foreground/20 rounded-md p-3 focus:ring-2 focus:ring-foreground/50 focus:border-foreground/50 outline-none transition duration-200"
+              />
+              {errors.lastName && (
+                <p className="mt-2 text-sm text-red-400">{errors.lastName}</p>
               )}
             </div>
             <div>
