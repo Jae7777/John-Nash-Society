@@ -1,30 +1,51 @@
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <nav className="bg-background shadow-md sticky top-0 z-50 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-slate-900 dark:text-white">
-              The John Nash Society
+            <Link
+              href="/"
+              className=""
+            >
+              <Image
+                src='/john-nash-society-banner-dark.svg'
+                alt="John Nash Society"
+                height={63}
+                width={112}
+                className="h-12 w-auto"
+              />
             </Link>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="/about" className="text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 px-3 py-2 rounded-md text-sm font-medium">
+              <Link
+                href="/about"
+                className="text-foreground text-lg hover:bg-blue-300/10 px-6 py-2 rounded-md duration-200"
+              >
                 About
               </Link>
-              <Link href="/events" className="text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 px-3 py-2 rounded-md text-sm font-medium">
+              <Link
+                href="/events"
+                className="text-foreground text-lg hover:bg-blue-300/10 px-6 py-2 rounded-md duration-200"
+              >
                 Events
               </Link>
-              <Link href="/members" className="text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 px-3 py-2 rounded-md text-sm font-medium">
+              <Link
+                href="/members"
+                className="text-foreground text-lg hover:bg-blue-300/10 px-6 py-2 rounded-md duration-200"
+              >
                 Members
               </Link>
             </div>
           </div>
         </div>
       </div>
+      {/* Gradient border/shadow at the bottom */}
+      <div className="absolute left-0 right-0 bottom-0 h-0.5 pointer-events-none bg-gradient-to-r from-[#1e2126] via-[#233b5e] to-[#404957]" />
     </nav>
   );
 };
