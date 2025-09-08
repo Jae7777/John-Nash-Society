@@ -73,7 +73,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className="text-foreground py-16 sm:py-24">
+    <section id='contact' className="text-foreground py-16 sm:py-24" >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
         <form
           onSubmit={handleSubmit}

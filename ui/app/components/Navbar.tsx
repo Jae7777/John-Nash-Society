@@ -7,12 +7,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link
-              href="/"
-              className=""
-            >
+            <Link href="/" className="">
               <Image
-                src='/john-nash-society-banner-dark.svg'
+                src="/john-nash-society-banner-dark.svg"
                 alt="John Nash Society"
                 height={63}
                 width={112}
@@ -39,6 +36,12 @@ const Navbar = () => {
                 className="text-foreground text-lg hover:bg-blue-300/10 px-6 py-2 rounded-md duration-200"
               >
                 Members
+              </Link>
+              <Link
+                href="/#contact"
+                className="text-foreground text-lg hover:bg-blue-300/10 px-6 py-2 rounded-md duration-200"
+              >
+                Contact
               </Link>
             </div>
           </div>

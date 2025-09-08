@@ -36,7 +36,7 @@ const Footer = () => {
             Members
           </a>
           <a
-            href="#"
+            href="/#contact"
             className="text-foreground/80 hover:text-white transition-colors"
           >
             Contact
