@@ -1,4 +1,4 @@
-export default function Events() {
+export default function EventsPage() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
