@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -17,30 +18,30 @@ const Footer = () => {
           Cultivating strategic thinking through mathematics and game theory.
         </p>
         <div className="flex justify-center space-x-6">
-          <a
+          <Link
             href="/about"
             className="text-foreground/80 hover:text-white transition-colors"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/events"
             className="text-foreground/80 hover:text-white transition-colors"
           >
             Events
-          </a>
-          <a
+          </Link>
+          <Link
             href="/members"
             className="text-foreground/80 hover:text-white transition-colors"
           >
             Members
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#contact"
             className="text-foreground/80 hover:text-white transition-colors"
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
