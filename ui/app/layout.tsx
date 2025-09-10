@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${timesNewRoman.className} antialiased`}
+        className={`${timesNewRoman.className} antialiased bg-background text-foreground`}
       >
         <Navbar />
         {children}

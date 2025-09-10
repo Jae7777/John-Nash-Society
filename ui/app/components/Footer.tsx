@@ -1,6 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const links = [
+  {
+    label: "About",
+    href: "/about"
+  },
+  {
+    label: "John Nash",
+    href: "/about/john-nash"
+  },
+  {
+    label: "Leadership",
+    href: "/leadership"
+  },
+  {
+    label: "Contact",
+    href: "/#contact"
+  },
+  {
+    label: "Activities",
+    href: "/activities"
+  },
+  {
+    label: "Lectures",
+    href: "/lectures/1"
+  }
+]
 const Footer = () => {
   return (
     <footer className="relative bg-background text-foreground py-12">
@@ -18,30 +44,15 @@ const Footer = () => {
           Cultivating strategic thinking through mathematics and game theory.
         </p>
         <div className="flex justify-center space-x-6">
-          <Link
-            href="/about"
-            className="text-foreground/80 hover:text-white transition-colors"
+          {links.map((link) => (
+            <Link
+              href={link.href}
+              className="text-foreground/80 hover:text-white transition-colors"
+              key={link.label}
           >
-            About
+            {link.label}
           </Link>
-          <Link
-            href="/events"
-            className="text-foreground/80 hover:text-white transition-colors"
-          >
-            Events
-          </Link>
-          <Link
-            href="/members"
-            className="text-foreground/80 hover:text-white transition-colors"
-          >
-            Members
-          </Link>
-          <Link
-            href="/#contact"
-            className="text-foreground/80 hover:text-white transition-colors"
-          >
-            Contact
-          </Link>
+          ))}
         </div>
       </div>
     </footer>
