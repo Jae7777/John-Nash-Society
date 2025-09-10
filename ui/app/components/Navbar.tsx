@@ -26,7 +26,7 @@ const Navbar = () => {
                 About
               </Link>
               <Link
-                href="/events"
+                href="/#events"
                 className="text-foreground text-lg hover:bg-blue-300/10 px-6 py-2 rounded-md duration-200"
               >
                 Events

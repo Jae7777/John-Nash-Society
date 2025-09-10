@@ -10,7 +10,7 @@ export function Events() {
   ));
 
   return (
-    <div className="container mx-auto py-20">
+    <div id='events' className="container mx-auto py-20">
       <h2 className=" mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200">
         Keep up for exciting events around the world of game theory
       </h2>
